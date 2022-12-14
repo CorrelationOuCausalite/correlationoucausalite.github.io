@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article>
+    <header>
+        <h1>
+            {{ .Title }}
+        </h1>
+    </header>
+    {{ .Content }}
+</article>
+
+<section>
+    <header>
+        <h1>
+            Posts
+        </h1>
+    </header>
+
+    {{- range ( where site.RegularPages "Section" "posts" | first 3 ) }}
+    <article>
+        <header>
+            <h1>
+                <a href="{{ .Page.RelPermalink }}">
+                    {{ .Page.Title }}
+                </a>
+            </h1>
+        </header>
+        {{ .Page.Params.Intro }}
+    </article>
+    {{ end }}
+</section>
+{{ end }}

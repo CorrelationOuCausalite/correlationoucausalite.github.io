@@ -1,0 +1,5 @@
+baseURL = "https://correlationoucausalite.github.io"
+languageCode = "fr"
+title = "My New Hugo Site"
+publishDir = "public"
+theme = "minimal-blog"
