@@ -6,12 +6,12 @@ webhook_url:
 sections:
 - type: directory
   path: content/fr/page
-  label: fr-page
+  label: Page - Français
   create: documents
   match: "**/*"
 - type: directory
   path: content/fr/blog
-  label: fr-blog
+  label: Blog - Français
   create: documents
   match: "**/*"
 upload_dir: static/uploads
