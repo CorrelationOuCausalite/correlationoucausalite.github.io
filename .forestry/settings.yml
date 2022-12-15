@@ -6,8 +6,8 @@ webhook_url:
 sections:
 - type: directory
   path: content/fr/page
-  label: fr-pages
-  create: all
+  label: fr-page
+  create: documents
   match: "**/*"
 - type: directory
   path: content/fr/blog
