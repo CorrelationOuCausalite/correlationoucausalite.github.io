@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: content/fr/page
   label: Page - Français
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: content/fr/blog
