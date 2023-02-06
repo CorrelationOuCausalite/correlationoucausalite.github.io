@@ -1,10 +1,21 @@
-This is a [Tina CMS](https://tina.io/) project for Hugo.
+# Tina Starter 🦙
 
-## Setup
+![tina-cloud-starter-demo](https://user-images.githubusercontent.com/103008/130587027-995ccc45-a852-4f90-b658-13e8e0517339.gif)
 
-- Fork this repo
-- Clone the fork your local machine.
-- This starter assumes that you have Hugo installed on your local machine. If not, reference [this guide](https://gohugo.io/getting-started/installing/).
+This Next.js starter is powered by [TinaCMS](https://app.tina.io) for you and your team to visually live edit the structured content of your website. ✨
+
+The content is managed through Markdown and JSON files stored in your GitHub repository, and queried through Tina GraphQL API.
+
+### Features
+
+- [Tina Headless CMS](https://app.tina.io) for authentication, content modeling, visual editing and team management.
+- [Vercel](https://vercel.com) deployment to visually edit your site from the `/admin` route.
+- Local development workflow from the filesystem with a local GraqhQL server.
+
+## Requirements
+
+- Git, [Node.js Active LTS](https://nodejs.org/en/about/releases/), Yarn installed for local development.
+- A [TinaCMS](https://app.tina.io) account for live editing.
 
 ## Local Development
 
@@ -20,16 +31,21 @@ Run the project locally:
 yarn dev
 ```
 
-Open [http://localhost:1313](http://localhost:1313) with your browser to see the result.
+### Local URLs
+
+- http://localhost:3000 : browse the website
+- http://localhost:3000/admin : connect to Tina Cloud and go in edit mode
+- http://localhost:3000/exit-admin : log out of Tina Cloud
+- http://localhost:4001/altair/ : GraphQL playground to test queries and browse the API documentation
 
 ### Building the Starter Locally (Using the hosted content API)
 
 Replace the `.env.example`, with `.env`
 
 ```
-TINA_CLIENT_ID=<get this from the project you create at app.tina.io>
+NEXT_PUBLIC_TINA_CLIENT_ID=<get this from the project you create at app.tina.io>
 TINA_TOKEN=<get this from the project you create at app.tina.io>
-TINA_BRANCH=<Specify the branch with Tina configured>
+NEXT_PUBLIC_TINA_BRANCH=<Specify the branch with Tina configured>
 ```
 
 Build the project:
@@ -38,28 +54,29 @@ Build the project:
 yarn build
 ```
 
-## Deploying the Site
+## Getting Help
 
-This project can easily be deployed using services like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/). 
+To get help with any TinaCMS challenges you may have:
 
-### Build settings
+- Visit the [documentation](https://tina.io/docs/) to learn about Tina.
+- [Join our Discord](https://discord.gg/zumN63Ybpf) to share feedback.
+- Visit the [community forum](https://community.tinacms.org/) to ask questions.
+- Get support through the chat widget on the TinaCMS Dashboard
+- [Email us](mailto:support@tina.io) to schedule a call with our team and share more about your context and what you're trying to achieve.
+- [Search or open an issue](https://github.com/tinacms/tinacms/issues) if something is not working.
+- Reach out on Twitter at [@tina_cms](https://twitter.com/tina_cms).
 
-In general, the build settings will look like so:
+## Development tips
 
-<img width="908" alt="hugo-build-settings" src="https://user-images.githubusercontent.com/3323181/198081223-c8830e49-2a77-4c7a-b1cf-bc9a44ca96cf.png">
+### Visual Studio Code GraphQL extension
 
-### Environment variables
+[Install the GraphQL extension](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql) to benefit from type auto-completion.
 
-When setting up the Netlify/Vercel project, apply the `TINA_CLIENT_ID` & `TINA_TOKEN` environment variables from your [app.tina.io](https://app.tina.io) project. 
+### Typescript
 
-The Hugo theme in this starter also depends on using a specific version of Hugo. Set the following environment variable as well:
-`HUGO_VERSION`: `0.92.0`
+A good way to ensure your components match the shape of your data is to leverage the auto-generated TypeScript types.
+These are rebuilt when your `.tina` config changes.
 
-## Learn More
+## LICENSE
 
-To learn more about Tina, take a look at the following resources:
-
-- [Tina Docs](https://tina.io/docs)
-- [Getting Started Guide](https://tina.io/guides/tinacms/non-react-based-ssg/guide/)
-
-You can check out the [Tina GitHub repository](https://github.com/tinacms/tinacms) - your feedback and contributions are welcome!
+Licensed under the [Apache 2.0 license](./LICENSE).
