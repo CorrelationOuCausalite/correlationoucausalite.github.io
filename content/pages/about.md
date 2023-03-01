@@ -1,12 +1,11 @@
 ---
 title: About
 blocks:
-  - quote: >-
-      There are only two hard things in Computer Science: cache invalidation and
-      naming things.
+  - quote: Bonjour je suis
     author: Phil Karlton
     color: primary
     _template: testimonial
 ---
+
 
 
