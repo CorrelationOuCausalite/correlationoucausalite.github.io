@@ -22,7 +22,7 @@
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "yellow",
     "font": "nunito",
     "darkMode": "system"
   }
