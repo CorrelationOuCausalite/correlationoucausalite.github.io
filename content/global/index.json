@@ -1,21 +1,12 @@
 {
   "header": {
-    "name": "Tina Starter",
     "icon": {
       "color": "orange",
-      "style": "float",
-      "name": "Tina"
+      "style": "circle"
     },
+    "name": "CorrelationOuCausalite",
     "color": "default",
     "nav": [
-      {
-        "href": "",
-        "label": "Home"
-      },
-      {
-        "href": "about",
-        "label": "About"
-      },
       {
         "href": "posts",
         "label": "Blog"
@@ -32,7 +23,7 @@
   },
   "theme": {
     "color": "blue",
-    "font": "sans",
+    "font": "nunito",
     "darkMode": "system"
   }
 }
